@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>AGA · estrela perdida</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;1,300&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+KR:wght@400;500&family=Spectral:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --void: #050211;
+    --purple-deep: #3D2159;
+    --lilas: #C9A3D6;
+    --lilas-light: #D9BBE4;
+    --lilas-dim: #8F6FA0;
+    --creme: #F3E9D2;
+    --creme-dim: #D9CFB8;
+    --f-serif: "Fraunces", "Times New Roman", serif;
+    --f-body: "Spectral", Georgia, serif;
+    --f-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; background: var(--void); color: var(--creme); font-family: var(--f-body); }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+    background:
+      radial-gradient(ellipse at 20% 10%, rgba(201, 163, 214, 0.18) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 85%, rgba(40, 69, 217, 0.14) 0%, transparent 55%),
+      linear-gradient(180deg, #0C0620 0%, var(--void) 60%, #140826 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.5;
+    background-image:
+      radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,0.7) 50%, transparent 100%),
+      radial-gradient(1.2px 1.2px at 75% 25%, rgba(201,163,214,0.6) 50%, transparent 100%),
+      radial-gradient(0.6px 0.6px at 40% 60%, rgba(255,255,255,0.5) 50%, transparent 100%),
+      radial-gradient(1px 1px at 90% 75%, rgba(243,233,210,0.5) 50%, transparent 100%),
+      radial-gradient(0.8px 0.8px at 25% 85%, rgba(201,163,214,0.4) 50%, transparent 100%),
+      radial-gradient(1.4px 1.4px at 60% 40%, rgba(255,255,255,0.4) 50%, transparent 100%);
+    pointer-events: none;
+  }
+  .wrap {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 520px;
+  }
+  .glyph {
+    font-size: 3rem;
+    color: var(--lilas);
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 20px rgba(201, 163, 214, 0.4);
+  }
+  .hangul {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 0.85rem;
+    color: var(--lilas-dim);
+    letter-spacing: 0.3em;
+    margin-bottom: 1rem;
+  }
+  h1 {
+    font-family: var(--f-serif);
+    font-weight: 300;
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--creme);
+  }
+  h1 em {
+    font-style: italic;
+    color: var(--lilas);
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--creme-dim);
+    margin-bottom: 2.5rem;
+  }
+  .cta {
+    display: inline-block;
+    padding: 0.9rem 1.6rem;
+    border: 1px solid var(--lilas);
+    border-radius: 999px;
+    background: rgba(201, 163, 214, 0.08);
+    color: var(--lilas-light);
+    font-family: var(--f-mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 300ms;
+  }
+  .cta:hover {
+    background: var(--lilas);
+    color: var(--void);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(201, 163, 214, 0.3);
+  }
+  .code {
+    font-family: var(--f-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--creme-dim);
+    opacity: 0.6;
+    margin-top: 3rem;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="glyph">✦</div>
+    <p class="hangul">한자매</p>
+    <h1>essa estrela ainda <em>não foi mapeada</em>.</h1>
+    <p>o endereço que você procura não existe no universo AGA. volte ao mapa e explore nossa constelação de cafés.</p>
+    <a href="/" class="cta">voltar ao universo</a>
+    <p class="code">404 · AGA</p>
+  </div>
+</body>
+</html>
